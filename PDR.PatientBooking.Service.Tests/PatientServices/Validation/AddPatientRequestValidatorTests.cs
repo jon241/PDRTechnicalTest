@@ -109,8 +109,6 @@ namespace PDR.PatientBooking.Service.Tests.PatientServices.Validation
         [TestCase("user@")]
         [TestCase("@")]
         [TestCase("user")]
-        //[TestCase(null)] // Null and empty already checked in above test
-        //[TestCase("")]
         public void ValidateRequest_InvalidEmail_ReturnsFailedValidationResult(string email)
         {
             //arrange
