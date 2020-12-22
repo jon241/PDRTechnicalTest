@@ -14,6 +14,7 @@
 - Add a new endpoint which allows a patient to cancel appointments.
 
 ### Should do
+- Update existing Nuget packages.
 - Find a way to test Add*Request.Created DateTime property is within seconds of other DateTime value
 - Increase missing code coverage of Controllers with unit tests.
 - Create automated integration tests.
