@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDR.PatientBookingApi.Tests", "PDR.PatientBookingApi.Tests\PDR.PatientBookingApi.Tests.csproj", "{2D3D1047-7546-4315-ABD8-21FB5B1500E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,12 +42,17 @@ Global
 		{C05DC6C9-C8FD-4C6F-884F-7BBFAE56F70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C05DC6C9-C8FD-4C6F-884F-7BBFAE56F70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C05DC6C9-C8FD-4C6F-884F-7BBFAE56F70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3D1047-7546-4315-ABD8-21FB5B1500E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3D1047-7546-4315-ABD8-21FB5B1500E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3D1047-7546-4315-ABD8-21FB5B1500E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3D1047-7546-4315-ABD8-21FB5B1500E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C05DC6C9-C8FD-4C6F-884F-7BBFAE56F70F} = {3A02801E-C2ED-467E-BBD3-1E14E3FC7787}
+		{2D3D1047-7546-4315-ABD8-21FB5B1500E4} = {3A02801E-C2ED-467E-BBD3-1E14E3FC7787}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13A7A097-4AB7-4F05-832E-01FDD96554BE}

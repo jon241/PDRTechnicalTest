@@ -6,9 +6,17 @@
 ## Tasks to do
 
 ### Must do
+- Add validation checks on the endpoint 
+  - Endpoint to have controller unit tests as I would always do.
+  - To ensure patients can’t book appointments in the past.
+  - To ensure that a patient can’t book an appointment with a doctor who is already busy.
+  - Check if EndTime is before StartTime, return BadRequest.
+- Add a new endpoint which allows a patient to cancel appointments.
 
 ### Should do
 - Find a way to test Add*Request.Created DateTime property is within seconds of other DateTime value
+- Increase missing code coverage of Controllers with unit tests.
+- Create automated integration tests.
 
 ## Tasks completed
 - Fixed unit tests
