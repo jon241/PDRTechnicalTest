@@ -9,7 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDR.PatientBooking.Data", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDR.PatientBooking.Service", "PDR.PatientBooking.Service\PDR.PatientBooking.Service.csproj", "{6B2E6EA3-EF51-4947-ACF8-D9BF908B8695}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDR.PatientBooking.Service.Tests", "PDR.PatientBooking.Service.Tests\PDR.PatientBooking.Service.Tests.csproj", "{C05DC6C9-C8FD-4C6F-884F-7BBFAE56F70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDR.PatientBooking.Service.Tests", "PDR.PatientBooking.Service.Tests\PDR.PatientBooking.Service.Tests.csproj", "{C05DC6C9-C8FD-4C6F-884F-7BBFAE56F70F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3A02801E-C2ED-467E-BBD3-1E14E3FC7787}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC3D5813-441F-4A45-AE27-840BFC71725D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +43,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C05DC6C9-C8FD-4C6F-884F-7BBFAE56F70F} = {3A02801E-C2ED-467E-BBD3-1E14E3FC7787}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13A7A097-4AB7-4F05-832E-01FDD96554BE}
