@@ -1,6 +1,6 @@
 # PDRTechnicalTest
 
-[![.NET Actions Status](https://github.com/jon242/PDRTechnicalTest/workflows/.NET/badge.svg)](https://github.com/jon241/PDRTechnicalTest/actions)
+[![.NET Actions Status](https://github.com/jon241/PDRTechnicalTest/workflows/.NET/badge.svg)](https://github.com/jon241/PDRTechnicalTest/actions)
 
 ## Tasks to do
 
