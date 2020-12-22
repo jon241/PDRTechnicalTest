@@ -23,13 +23,11 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     #- name: Test
-    #  run: dotnet test --no-build --verbosity normal 
+    #  run: dotnet test --no-build --verbosity normal cd ./PDR.PatientBooking.Service.Tests/
     - name: Generate coverage report
-        run: |
-          cd ./PDR.PatientBooking.Service.Tests/
-          dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
-      - name: Publish coverage report to coveralls.io
-        uses: coverallsapp/github-action@v1.0.1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./PDR.PatientBooking.Service.Tests/TestResults/coverage.info
+      run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+    - name: Publish coverage report to coveralls.io
+      uses: coverallsapp/github-action@v1.0.1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: ./PDR.PatientBooking.Service.Tests/TestResults/coverage.info

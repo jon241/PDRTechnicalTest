@@ -1,4 +1,4 @@
-# PDRTechnicalTest
+# PushDoctor Technical Test
 
 [![.NET Actions Status](https://github.com/jon241/PDRTechnicalTest/workflows/.NET/badge.svg)](https://github.com/jon241/PDRTechnicalTest/actions)
 [![Coverage Status](https://coveralls.io/repos/github/jon241/PDRTechnicalTest/badge.svg)](https://coveralls.io/github/jon241/PDRTechnicalTest)
