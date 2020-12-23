@@ -10,6 +10,7 @@ namespace PDR.PatientBookingApi.Controllers
     // This controller design is more in keeping with my own best practice
     // and what is found in the other controllers.
     [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "v2")]
     [ApiController]
     public class BookingV2Controller : ControllerBase
     {
@@ -17,17 +18,23 @@ namespace PDR.PatientBookingApi.Controllers
 
         public BookingV2Controller(IBookingService bookingService)
         {
+            if (bookingService == null)
+                throw new ArgumentNullException(nameof(bookingService));
+
             _bookingService = bookingService;
         }
 
         [HttpPost()]
-        public IActionResult AddBooking(AddBookingRequest request)
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public IActionResult AddBooking([FromBody]AddBookingRequest request)
         {
             try
             {
                 _bookingService.AddBooking(request);
 
-                return Ok();
+                return StatusCode(201);
             }
             catch (ArgumentException exception)
             {

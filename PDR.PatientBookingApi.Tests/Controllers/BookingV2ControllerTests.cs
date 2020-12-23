@@ -23,6 +23,15 @@ namespace PDR.PatientBookingApi.Tests.Controllers
         }
 
         [Test]
+        public void Constructor_WithNullService_ThrowsArgumentNullException()
+        {
+            TestDelegate test = () => new BookingV2Controller(null);
+
+            Exception actual = Assert.Catch<ArgumentNullException>(test, "Exception");
+            Assert.AreEqual("Value cannot be null. (Parameter 'bookingService')", actual.Message, "Message");
+        }
+
+        [Test]
         public void AddBooking_ValidationFails_ReturnStatusCodeBadRequest()
         {
             var request = new AddBookingRequest();
@@ -45,14 +54,14 @@ namespace PDR.PatientBookingApi.Tests.Controllers
         }
 
         [Test]
-        public void AddBooking_BookingSucceeds_ReturnStatusCodeOK()
+        public void AddBooking_BookingSucceeds_ReturnStatusCodeCreated()
         {
             var request = new AddBookingRequest();
             _serviceMock.Setup(p => p.AddBooking(request));
 
             IActionResult response = _controller.AddBooking(request);
 
-            Assert.AreEqual((int)HttpStatusCode.OK, (response as StatusCodeResult).StatusCode, "StatusCode");
+            Assert.AreEqual((int)HttpStatusCode.Created, (response as StatusCodeResult).StatusCode, "StatusCode");
         }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PDR.PatientBooking.Data;
+using PDR.PatientBooking.Service.BookingServices;
 using PDR.PatientBooking.Service.IoC;
 
 namespace PDR.PatientBookingApi
@@ -31,6 +32,7 @@ namespace PDR.PatientBookingApi
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PatientBookingApi", Version = "v1" });
+                c.SwaggerDoc("v2", new OpenApiInfo { Title = "PatientBookingApi", Version = "v2" });
             });
 
             services.RegisterPatientBookingServices();
@@ -62,6 +64,7 @@ namespace PDR.PatientBookingApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "PatientBookingApi V1");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "PatientBookingApi V2");
                 c.RoutePrefix = string.Empty;
             });
         }

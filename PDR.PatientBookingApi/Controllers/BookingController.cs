@@ -8,6 +8,7 @@ using System.Linq;
 namespace PDR.PatientBookingApi.Controllers
 {
     [Route("api/[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     [ApiController]
     public class BookingController : ControllerBase
     {
