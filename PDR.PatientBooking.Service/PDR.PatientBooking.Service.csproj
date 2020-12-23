@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="BookingServices\Responses\" />
-    <Folder Include="BookingServices\Validation\" />
   </ItemGroup>
 
 </Project>

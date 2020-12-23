@@ -6,11 +6,12 @@
 ## Tasks to do
 
 ### Must do
+- ~~Fixed unit tests~~
 - Add validation checks on the endpoint 
-  - Endpoint to have controller unit tests as I would always do.
-  - To ensure patients can’t book appointments in the past.
+  - ~~Endpoint to have controller unit tests as I would always do.~~
+  - ~~To ensure patients can’t book appointments in the past.~~
   - To ensure that a patient can’t book an appointment with a doctor who is already busy.
-  - Check if EndTime is before StartTime, return BadRequest.
+  - ~~Check if EndTime is before StartTime, return BadRequest.~~
 - Add a new endpoint which allows a patient to cancel appointments.
 
 ### Should do
@@ -19,7 +20,6 @@
 - Increase missing code coverage of Controllers with unit tests.
 - Create automated integration tests.
 
-## Tasks completed
-- Fixed unit tests
-- Added github action to build and run unit tests
-- Added build status to readme.
+### Nice to do
+- ~~Added github action to build and run unit tests~~
+- ~~Added build status to readme.~~
