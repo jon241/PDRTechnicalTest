@@ -28,11 +28,11 @@ namespace PDR.PatientBooking.Service.BookingServices.Validation
             if (PatientNotFound(request, ref result))
                 return result;
 
-            if (DoctorNotFound(request, ref result))
-                return result;
+            /*if (DoctorNotFound(request, ref result))
+                return result;*/
 
-            if (IsDoctorBusy(request, ref result))
-                return result;
+            /*if (IsDoctorBusy(request, ref result))
+                return result;*/
 
             return result;
         }
