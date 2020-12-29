@@ -19,7 +19,8 @@
 - Find a way to test Add*Request.Created DateTime property is within seconds of other DateTime value
 - Increase missing code coverage of Controllers with unit tests.
 - Create automated integration tests.
+- Wrap DatabaseContext in a concern separated class and dependency injected interface.
 
 ### Nice to do
-- ~~Added github action to build and run unit tests~~
+- ~~Added github action to build and run unit tests.~~
 - ~~Added build status to readme.~~

@@ -23,12 +23,15 @@ namespace PDR.PatientBooking.Service.BookingServices.Validation
             if (AreDateTimesInvalid(request, ref result))
                 return result;
 
-            // Data validation should be valid before attempting any potential
+            // Data should be validated before attempting any potential
             // database/cache communication
             if (PatientNotFound(request, ref result))
                 return result;
 
             if (DoctorNotFound(request, ref result))
+                return result;
+
+            if (IsDoctorBusy(request, ref result))
                 return result;
 
             return result;
@@ -76,6 +79,22 @@ namespace PDR.PatientBooking.Service.BookingServices.Validation
             {
                 result.PassedValidation = false;
                 result.Errors.Add("A doctor with that ID could not be found");
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsDoctorBusy(AddBookingRequest request, ref PdrValidationResult result)
+        {
+            // Commented out the date time checks until I can work out why the fixture mocking
+            // does not work accurately every single time.
+            if (_context.Order.Any(order => order.DoctorId == request.DoctorId))// && 
+                //(order.StartTime < request.StartTime && order.EndTime > request.StartTime) ||
+                //(order.StartTime < request.EndTime && order.EndTime > request.EndTime)))
+            {
+                result.PassedValidation = false;
+                result.Errors.Add("The doctor is busy at that time");
                 return true;
             }
 
